@@ -166,8 +166,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'  # Servidor SMTP de Gmail
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'acreditacionesicesi@gmail.com'  # Tu correo de Gmail
-EMAIL_HOST_PASSWORD = 'ecqwswcyoheyvuru'  # Clave de aplicación (no tu contraseña normal)
-DEFAULT_FROM_EMAIL = 'acreditacionesicesi@gmail.com'  # Debe ser el mismo que EMAIL_HOST_USER
+EMAIL_HOST_USER = '' # Remove this information for production (it doesn't matter because the deployment was done in another private repo)
+EMAIL_HOST_PASSWORD = ''
+DEFAULT_FROM_EMAIL = ''
 
 LOGIN_URL = '/login/'
