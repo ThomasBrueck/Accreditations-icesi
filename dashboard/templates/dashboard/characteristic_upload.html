@@ -1,0 +1,34 @@
+{% extends 'dashboard/base-dashboard.html' %}
+{% load static %}
+
+{% block title %}Upload Characteristics{% endblock %}
+
+{% block css_files %}
+<link rel='stylesheet' href="{% static 'dashboard/dashboard.css' %}">
+<link rel='stylesheet' href="{% static 'dashboard/sidebar.css' %}">
+<link rel='stylesheet' href="{% static 'dashboard/reports.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include "dashboard/include/sidebar.html" %}
+{% include 'dashboard/include/navbar.html' %}
+
+<div class="main-content">
+    <div class="container py-4">
+        <h2 class="mb-4">Upload Characteristics for {{ factor.name }}</h2>
+
+        <form method="post" enctype="multipart/form-data" class="card shadow-sm p-4">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="csv_file" class="form-label">Upload CSV File</label>
+                <input type="file" name="csv_file" id="csv_file" class="form-control" accept=".csv" required>
+                <small class="text-muted">CSV should contain 'title' and 'description' columns.</small>
+            </div>
+            <div class="d-flex justify-content-end">
+                <a href="{% url 'characteristic-manage' factor.id %}" class="btn btn-outline-secondary me-2">Cancel</a>
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

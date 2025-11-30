@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F13ADBDF-87FB-8E96-1BB5-A2079A79798D" name=" StatusReport">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-02 02:50:59 UTC</createdTime>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<engineerTo>
+<item key="3D6F769F-8A12-3156-A6E5-23D94D74E37E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_Status" id="D7708D20-7217-6C78-E51F-C3043507F8B7">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-02 02:52:07 UTC</createdTime>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<engineerTo>
+<item key="3D6F769F-8A12-3156-A6E5-23D94D74E37E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="type" id="8685858B-B301-7C41-5EBE-7CAACC048449">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-02 02:52:16 UTC</createdTime>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<engineerTo>
+<item key="3D6F769F-8A12-3156-A6E5-23D94D74E37E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_report" id="1FFFB87F-10D4-9CF1-B46C-1DA96ABD5401">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-02 02:52:58 UTC</createdTime>
+<generatorID>8530F4B2-87D5-3FDD-A00F-13AE6D06E541</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<engineerTo>
+<item key="3D6F769F-8A12-3156-A6E5-23D94D74E37E" value="true"/>
+</engineerTo>
+<referedAttribute>25D554D1-D741-7B09-5E35-000B9A976A2A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C3C66881-B52E-00C9-618A-1B04C4D3C292" name="Estado PK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-02 02:52:15 UTC</createdTime>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<engineerTo>
+<item key="3D6F769F-8A12-3156-A6E5-23D94D74E37E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D7708D20-7217-6C78-E51F-C3043507F8B7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

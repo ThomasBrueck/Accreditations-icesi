@@ -1,0 +1,95 @@
+{% extends "dashboard/base-dashboard.html" %}
+{% load static %}
+
+{% block title %}
+    {% if comment %}Edit Comment{% else %}Create Comment{% endif %}
+{% endblock %}
+
+{% block css_files %}
+    <link rel='stylesheet' href="{% static 'dashboard/dashboard.css' %}">
+    <link rel='stylesheet' href="{% static 'dashboard/sidebar.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'dashboard/comments.css' %}">
+    <link rel="stylesheet" href="{% static 'dashboard/include/confirm-window.css' %}">
+{% endblock %}
+
+{% block js_files %}
+    <script src="{% static 'dashboard/js/confirm-window.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+  {% include 'dashboard/include/sidebar.html' %}
+
+  <input type="checkbox" id="sidebar-toggle" class="d-none">
+
+  <div class="main-content">
+    <div class="container py-4">
+
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="bg-white p-4 rounded shadow-sm">
+                <h1 class="mb-4 text-center">
+                    {% if comment %}
+                        Edit Comment for {{ factor.name }}
+                    {% else %}
+                        Create Comment for {{ factor.name }}
+                    {% endif %}
+                </h1>
+
+                <form method="POST" class="mt-4" id="reportForm">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Full Name:</label>
+                        <input type="text" class="form-control" name="title" id="title" value="{{ comment.title|default_if_none:'' }}" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="content" class="form-label">Comment:</label>
+                        <textarea class="form-control" name="content" id="content" rows="5" required>{{ comment.content|default_if_none:'' }}</textarea>
+                    </div>
+
+                    <div class="d-flex justify-content-end">
+                        <button type="button" id="triggerModal" class="btn btn-sm btn-primary">Apply</button>
+                    </div>
+                </form>
+
+                {% if messages %}
+                    <div class="messages mt-4">
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="customModal" class="custom-modal">
+    <div class="custom-modal-content">
+      <h5 class="mb-3">
+        {% if comment %}Confirm Edit{% else %}Are you sure?{% endif %}
+      </h5>
+      <p>
+        {% if comment %}
+          Confirm if you want to update this comment.
+        {% else %}
+          Confirm if you want to create this comment.
+        {% endif %}
+      </p>
+      <div class="d-flex justify-content-end gap-2 mt-4">
+        <button type="button" id="cancelModal" class="btn btn-outline-secondary">Cancel</button>
+        <button type="button" id="submitReport" class="btn btn-primary">
+          {% if comment %}Save{% else %}Create{% endif %}
+        </button>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

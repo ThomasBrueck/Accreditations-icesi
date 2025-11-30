@@ -1,0 +1,61 @@
+{% extends 'dashboard/base-dashboard.html' %}
+{% load static %}
+
+{% block title %}
+Historial de Notificaciones
+{% endblock %}
+
+{% block css_files %}
+<link rel='stylesheet' href="{% static 'dashboard/dashboard.css' %}">
+<link rel='stylesheet' href="{% static 'dashboard/sidebar.css' %}">
+<style>
+    .table th, .table td { vertical-align: middle; }
+</style>
+{% endblock %}
+
+{% block content %}
+{% include 'dashboard/include/sidebar.html' %}
+{% include 'dashboard/include/navbar.html' %}
+
+<input type="checkbox" id="sidebar-toggle" class="d-none">
+
+<div class="main-content">
+    <div class="container-fluid py-4">
+        <div class="col-md-10 mx-auto">
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-white py-3">
+                    <h5 class="mb-0">Notification History <span class="text-muted small">{{ logs.count }} Records</span></h5>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th scope="col" class="text-center">Recipient</th>
+                                    <th scope="col" class="text-center">Sent Date</th>
+                                    <th scope="col" class="text-center">Sent By</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for log in logs %}
+                                    <tr>
+                                        <td class="text-center">{{ log.recipient }}</td>
+                                        <td class="text-center">{{ log.sent_at|date:"d/m/Y H:i" }}</td>
+                                        <td class="text-center">{{ log.created_by.username }}</td>
+                                    </tr>
+                                {% empty %}
+                                    <tr>
+                                        <td colspan="3" class="text-center py-4">
+                                            <p class="mb-0 text-muted">No notification records found.</p>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

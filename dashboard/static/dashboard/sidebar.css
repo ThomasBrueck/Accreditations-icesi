@@ -1,0 +1,88 @@
+.sidebar {
+    background-color: #0055ff;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1030;
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar-header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .sidebar-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .sidebar-menu {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  
+  .sidebar-menu li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar-menu a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+  }
+  
+  .sidebar-menu a:hover,
+  .sidebar-menu a.active {
+    background-color: rgba(193, 14, 14, 0.1);
+    color: white;
+  }
+  
+  .sidebar-menu i {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  .sidebar-footer {
+    position: absolute;
+    bottom: 20px;
+    width: calc(100% - 40px);
+  }
+  
+  .logout-btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .logout-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .logout-btn i {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  .main-content {
+    padding-left: 250px; /* Compensa el ancho del sidebar */
+  }
+  
+  

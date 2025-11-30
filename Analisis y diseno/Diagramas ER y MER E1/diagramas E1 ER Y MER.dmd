@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="diagramas E1 ER Y MER" id="6A10F292-06C6-F0E3-A483-8773BDE0B7FB" version="3.5">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-02 01:14:26 UTC</createdTime>
+<ownerDesignName>diagraamaint</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>6A10F292-06C6-F0E3-A483-8773BDE0B7FB</designId>
+</OSDM_Design>

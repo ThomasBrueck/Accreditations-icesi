@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_13" directorySegmentName="seg_0" id="D5DD1102-8883-4B58-02EF-DFBC1FD88563">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-02 14:36:16 UTC</createdTime>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<engineerTo>
+<item key="3D6F769F-8A12-3156-A6E5-23D94D74E37E" value="true"/>
+</engineerTo>
+<sourcePk>F8395028-70B0-B843-FFB4-57B7CD36696B</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>7FE88100-1307-D77F-15D2-A93BF470A8FD</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>ECBD24CC-2D0F-7587-3DC7-84372942F3BC</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

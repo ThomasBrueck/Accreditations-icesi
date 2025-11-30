@@ -1,0 +1,122 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2A5610A1-6ECF-B776-8C24-2711D01BBC66" name="User">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>7FE88100-1307-D77F-15D2-A93BF470A8FD</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id_user" id="DFF06012-119E-71AB-1E88-5885C6B125D0">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>2FC8FCEE-2A4C-F3B0-1183-EDAD4393A093</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="5AD2B2F8-A9F6-9486-CFD7-82843B19203C">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>04CBE4EF-593C-83A6-EDAF-58E8305AA3A6</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="03DA9EE2-E614-005C-A15F-100F09C5BFD2">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>E76C7B37-132C-04B3-E612-69E611DE8AA8</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Dofa_id_dofa" id="3A8F0EBA-DDF4-EE4C-304B-7506116D8E70">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>3933B0CF-EAB0-9EEF-FE87-494009B11A82</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D11FF829-37C0-990D-6E96-8E6E9F2740B4" referredColumn="67456320-9E99-B91A-B315-E3C546855440"/>
+</associations>
+</Column>
+<Column name="Role_Id_role" id="C50ACB8A-028C-D20D-1CAE-109D3BC7B2EC">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>88D0C384-102C-3D9D-EBD8-99B38A9B9184</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="56A6458B-76B2-AC59-E650-D22E0793D6B2" referredColumn="CF7C256A-BBE1-1A2F-C794-8EF92C118A84"/>
+</associations>
+</Column>
+<Column name="password" id="BE0F51BF-AA34-3060-7B1F-4AD67EA33619">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>E02ECAA6-CF4C-1532-7AF0-82D58A7AEA03</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="82459570-9A83-505F-C740-5C9E87F717D4" name="User_PK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>F8395028-70B0-B843-FFB4-57B7CD36696B</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DFF06012-119E-71AB-1E88-5885C6B125D0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="861DDA7E-C4E6-5E18-F40B-2F112DD95008" name="User_Role_FK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>45EA706C-5157-349B-D9D7-04BABEC92865</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C50ACB8A-028C-D20D-1CAE-109D3BC7B2EC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F8A89C47-1478-9F44-6464-122B26D3B953" name="User_Dofa_FK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-09 21:58:08 UTC</createdTime>
+<generatorID>82FBBBCC-16E2-0785-1ECF-B460CB23B4BA</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3A8F0EBA-DDF4-EE4C-304B-7506116D8E70"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

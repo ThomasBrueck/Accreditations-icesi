@@ -1,0 +1,105 @@
+/* --- Contenedor del formulario --- */
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* --- Título principal --- */
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/* --- Etiquetas de los campos --- */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    text-align: left;
+    color: #333;
+}
+
+/* --- Campos de entrada --- */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+    background: #f8f8f8;
+}
+
+/* --- Efecto al enfocar el input --- */
+input:focus {
+    border: 2px solid #6200ea;
+}
+
+/* --- Mensajes de error estilizados --- */
+.errorlist { 
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.errorlist li {
+    background: #ffe6e6;
+    color: #d9534f;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #d9534f;
+}
+
+/* --- Contenedor de mensajes generales --- */
+.messages {
+    width: 100%;
+    max-width: 350px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+/* --- Mensajes de éxito (igual que error pero en verde) --- */
+.message.success {
+    background: #e6ffe6;  /* Verde claro (similar a #ffe6e6 del error) */
+    color: #28a745;  /* Verde fuerte (similar a #d9534f del error) */
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #28a745; /* Borde verde (igual que el del error pero en verde) */
+}
+
+/* --- Botón de validación --- */
+button {
+    background: #0055ff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    width: 100%;
+}
+
+/* --- Efecto hover en botón --- */
+button:hover {
+    background: #00bbff;
+}

@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="38E49CBE-1965-99CE-3C37-67A95C2ADCAC" name="Factor">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-02 02:02:53 UTC</createdTime>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<engineerTo>
+<item key="3D6F769F-8A12-3156-A6E5-23D94D74E37E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_factor" id="FB924C4A-1032-B589-7720-E1787AAE2C2D">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-02 03:02:36 UTC</createdTime>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<engineerTo>
+<item key="3D6F769F-8A12-3156-A6E5-23D94D74E37E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_report" id="487264E7-F5CA-A55D-3C6C-12EECFDE59D0">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-02 03:21:17 UTC</createdTime>
+<generatorID>5FD7A75C-0F74-AA2A-2DDB-D08B18B44682</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<engineerTo>
+<item key="3D6F769F-8A12-3156-A6E5-23D94D74E37E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>25D554D1-D741-7B09-5E35-000B9A976A2A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_Statusfactor" id="7D6EE644-40C5-73C8-67D7-73945774798A">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-02 14:34:43 UTC</createdTime>
+<generatorID>70589638-2D4F-5C1B-4271-DFF4872130DA</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<engineerTo>
+<item key="3D6F769F-8A12-3156-A6E5-23D94D74E37E" value="true"/>
+</engineerTo>
+<referedAttribute>1BE6AE2A-6815-83CC-EB63-794B13EE70AF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="characteristic" id="7367A04E-EBC0-8832-DB4D-7621D0E788C6">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:08:38 UTC</createdTime>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<engineerTo>
+<item key="3D6F769F-8A12-3156-A6E5-23D94D74E37E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FD1DF1EE-F70D-75F7-A4A6-B81F6F14D7BA" name="Factor PK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-02 03:04:27 UTC</createdTime>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<engineerTo>
+<item key="3D6F769F-8A12-3156-A6E5-23D94D74E37E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FB924C4A-1032-B589-7720-E1787AAE2C2D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

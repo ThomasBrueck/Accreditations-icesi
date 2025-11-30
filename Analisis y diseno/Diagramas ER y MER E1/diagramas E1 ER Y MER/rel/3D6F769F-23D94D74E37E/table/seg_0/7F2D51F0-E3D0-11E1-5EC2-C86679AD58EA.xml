@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7F2D51F0-E3D0-11E1-5EC2-C86679AD58EA" name="Dofa">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>EAA21A9C-F011-6C3A-DCE2-13519F957DF0</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_dofa" id="67456320-9E99-B91A-B315-E3C546855440">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>920719AC-431E-1DB5-7732-4FEA6C7CC0E8</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="strengths" id="FDF4A9DF-FA57-B7F9-681B-CFA6751D1E0A">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>DA193AEC-0249-F8D6-1BEC-CB192F3DD51F</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="weaknesses" id="B082CE06-3BF2-892C-1399-F6CE7E27C340">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>66DCEFE1-0FD1-9E43-49B4-EBC6F45D971A</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="threats" id="5ED03107-B0BB-07E2-7B3A-04D9D1CB31B2">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>C892924D-55B5-DF69-504F-6553E339BB67</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="User_Id_user" id="6179709C-CFF5-00D6-D91E-8E3AC2803B4F">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>82CF5CEB-978F-4911-CBF0-693910C0633C</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="83488253-76F9-440C-F449-05E3CE594912" referredColumn="DFF06012-119E-71AB-1E88-5885C6B125D0"/>
+</associations>
+</Column>
+<Column name="opportunities" id="2317FDBA-C778-7814-D7E3-C35B2AE7BA34">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>55E41FDB-2DB3-23BE-8574-B19E0E53DFC4</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="25D7AF73-48EA-0DC2-CA88-903AB5C589F0" name="Dofa_PK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>CF4D8533-CB47-E6AC-38B6-DCF49BBD469B</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="67456320-9E99-B91A-B315-E3C546855440"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="724C0052-0287-F762-70B3-90E61EFC4309" name="Dofa_User_FK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-09 21:58:08 UTC</createdTime>
+<generatorID>82FBBBCC-16E2-0785-1ECF-B460CB23B4BA</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6179709C-CFF5-00D6-D91E-8E3AC2803B4F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

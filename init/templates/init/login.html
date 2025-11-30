@@ -1,0 +1,58 @@
+{% extends "init/base-init.html" %}
+{% load static %}
+
+{% block title %}
+    Login ACADI
+{% endblock %}
+
+{% block css_files %}
+    <link rel='stylesheet' href="{% static 'init/login.css' %}">
+    <link rel='stylesheet' href="{% static 'init/include/background.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    {% include "init/include/nav-bar.html"%}
+    
+    <h1 class="login">Login</h1>
+
+    <div class="background-overlay"></div>
+
+    <form method="POST">
+        {% csrf_token %}
+        
+        <div>
+            <label for="{{ form.username.id_for_label }}">{{ form.username.label }}</label>
+            {{ form.username }}
+            {% if form.username.errors %}
+                <div class="error">
+                    {% for error in form.username.errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+      
+        <div>
+            <label for="{{ form.password.id_for_label }}">{{ form.password.label }}</label>
+            {{ form.password }}
+        </div>
+
+        {% if form.non_field_errors %}
+            <div class="error">
+                {% for error in form.non_field_errors %}
+                    <p>{{ error }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <div class="separator-line"></div>
+
+        <button type="submit">Log in</button>
+
+        <a href="{% url 'forgot-password' %}">Forgot password?</a>
+    </form>
+  
+
+
+{% endblock %}

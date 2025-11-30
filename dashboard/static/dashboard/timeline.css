@@ -1,0 +1,270 @@
+/* timeline.css */
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 40px 20px 80px;  /* Aumentado padding bottom */
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 40px;         
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #E0E0E0;
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    text-align: center;
+    flex: 1;
+    z-index: 2;
+    padding: 0 10px;
+    min-width: 150px;
+    margin-top: 20px;   
+}
+
+.timeline-dot {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 2px solid #E0E0E0;
+    border-radius: 50%;
+    margin: 0 auto;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.timeline-dot i {
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Estados */
+.timeline-dot.completed {
+    border-color: #4CAF50;
+    background: #4CAF50;
+}
+
+.timeline-dot.completed i {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.timeline-dot.in-progress {
+    border-color: #2196F3;
+    background: #2196F3;
+}
+
+.timeline-dot.in-progress i {
+    color: #fff;
+    animation: pulse 2s infinite;
+}
+
+.timeline-dot.pending {
+    border-color: #E0E0E0;
+    background: #fff;
+}
+
+.timeline-dot.pending i {
+    color: #9E9E9E;
+}
+
+
+.timeline-progress {
+    position: absolute;
+    top: 40px;          
+    left: 0;
+    height: 2px;
+    background: linear-gradient(to right, #4CAF50, #2196F3);
+    z-index: 1;
+    transition: width 0.3s ease;
+}
+
+
+.timeline-text {
+    font-size: 13px;
+    margin-top: 25px;   
+    max-width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; 
+}
+
+.timeline-text .stage {
+    display: block;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.timeline-text .status {
+    display: inline-block;  
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-top: 8px;    
+}
+
+.timeline-text .status.completed {
+    background: #E8F5E9;
+    color: #4CAF50;
+}
+
+.timeline-text .status.in-progress {
+    background: #E3F2FD;
+    color: #2196F3;
+}
+
+.timeline-text .status.pending {
+    background: #F5F5F5;
+    color: #9E9E9E;
+}
+
+/* Añadir espacio entre cards */
+.dashboard-card.full-width {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    overflow: hidden;
+}
+
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 40px 20px; 
+    max-width: 1200px;   
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+
+.timeline-item {
+    position: relative;
+    text-align: center;
+    flex: 1;
+    z-index: 2;
+    padding: 0 10px;  
+    min-width: 150px; 
+}
+
+
+.timeline-text {
+    font-size: 13px;
+    margin-top: 12px;
+    max-width: 160px;  
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timeline-text .stage {
+    display: block;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.timeline-dot:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 1200px) {
+    .timeline {
+        padding: 40px 10px 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-card.full-width {
+        margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .timeline {
+        padding: 30px 5px 60px;
+    }
+    
+    .timeline::before {
+        top: 30px;
+    }
+    
+    .timeline-progress {
+        top: 30px;
+    }
+    
+    .timeline-text {
+        margin-top: 20px;
+    }
+
+    .timeline-item {
+        min-width: 120px;
+    }
+
+    .timeline-dot {
+        width: 35px;
+        height: 35px;
+    }
+
+    .timeline-dot i {
+        font-size: 14px;
+    }
+}
+
+/* Iconos específicos para cada etapa */
+#dot1 i::before {
+    content: "\f0e0";  /* Icono de sobre/email */
+    font-family: "Font Awesome 5 Free";
+}
+
+#dot2 i::before {
+    content: "\f085";  /* Icono de engranaje/configuración */
+    font-family: "Font Awesome 5 Free";
+}
+
+#dot3 i::before {
+    content: "\f201";  /* Icono de gráfico */
+    font-family: "Font Awesome 5 Free";
+}
+
+#dot4 i::before {
+    content: "\f14a";  /* Icono de checkbox */
+    font-family: "Font Awesome 5 Free";
+}
+
+#dot5 i::before {
+    content: "\f15c";  /* Icono de documento */
+    font-family: "Font Awesome 5 Free";
+}
+
+#dot6 i::before {
+    content: "\f15b";  /* Icono de archivo */
+    font-family: "Font Awesome 5 Free";
+}

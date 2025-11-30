@@ -1,0 +1,105 @@
+{% extends "dashboard/base-dashboard.html" %}
+
+{% load static %}
+
+{% block title %}
+    Review Comment
+{% endblock %}
+
+{% block css_files %}
+    <link rel='stylesheet' href="{% static 'dashboard/dashboard.css' %}">
+    <link rel='stylesheet' href="{% static 'dashboard/sidebar.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'dashboard/comments.css' %}">
+{% endblock %}
+
+{% block js_files %}
+    <script src="{% static 'dashboard/js/comment_review.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+  {% include 'dashboard/include/sidebar.html' %}
+  {% include 'dashboard/include/navbar.html' %}
+  
+
+  <input type="checkbox" id="sidebar-toggle" class="d-none">
+
+  <div class="main-content">
+    <div class="container py-4">
+      <div class="col-md-8 mx-auto">
+        <div class="bg-white p-4 rounded shadow-sm">
+          <h1 class="mb-4 text-center">Review Comment for {{ comment.factor.name }}</h1>
+
+          <div class="table-responsive mb-4">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>User</th>
+                  <th>Status</th>
+                  <th>Justification</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{ comment.title }}</td>
+                  <td>{{ comment.owner.username }}</td>
+                  <td>
+                    <span class="status-{% if comment.status == 'approved' %}approved{% elif comment.status == 'not_approved' %}not-approved{% else %}pending{% endif %}">
+                      {% if comment.status == 'approved' %}
+                        APPROVED
+                      {% elif comment.status == 'not_approved' %}
+                        NOT APPROVED
+                      {% else %}
+                        PENDING
+                      {% endif %}
+                    </span>
+                  </td>
+                  <td>
+                    {% if comment.justification %}
+                      <a href="{% url 'justification-detail' comment_id=comment.id %}" class="btn btn-sm btn-info">View</a>
+                    {% endif %}
+                  </td>
+                  <td>{{ comment.updated_at|date:"Y/m/d" }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="comment-content mb-4">
+            <h5>Comment Content:</h5>
+            <div class="content-display">{{ comment.content|safe }}</div>
+          </div>
+
+          <form method="POST" action="{% url 'comment-review' comment_id=comment.id %}">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="justification" class="form-label">Justification (required if disapproving):</label>
+              <textarea name="justification" id="justification" class="form-control" rows="4" placeholder="Enter your justification here...">{{ justification }}</textarea>
+            </div>
+
+            <div class="d-flex justify-content-end gap-2">
+              <button type="submit" name="action" value="approve" class="btn btn-success">Approve</button>
+              <button type="submit" name="action" value="disapprove" class="btn btn-danger">Disapprove</button>
+              <a href="{% url 'comments-list' factor_id=comment.factor.id %}" class="btn btn-secondary">Back</a>
+            </div>
+          </form>
+
+          {% if messages %}
+          <div class="messages mt-4">
+            {% for message in messages %}
+              <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

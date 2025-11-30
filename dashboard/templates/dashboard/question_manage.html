@@ -1,0 +1,60 @@
+{% extends 'dashboard/base-dashboard.html' %}
+{% load static %}
+
+{% block title %}Manage Questions{% endblock %}
+
+{% block css_files %}
+<link rel='stylesheet' href="{% static 'dashboard/dashboard.css' %}">
+<link rel='stylesheet' href="{% static 'dashboard/sidebar.css' %}">
+<link rel='stylesheet' href="{% static 'dashboard/reports.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include "dashboard/include/sidebar.html" %}
+
+<div class="main-content">
+  <div class="container py-4">
+    <h2 class="mb-4">Manage Questions for {{ factor.name }}</h2>
+
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if is_acadi %}
+      <div class="mb-4">
+        <a href="{% url 'question-create' factor.id %}" class="btn btn-primary">Add Question</a>
+      </div>
+    {% endif %}
+
+    <div class="row g-4">
+      <div class="col-12">
+        <div class="accordion" id="questionAccordion">
+          {% for question in questions %}
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading{{ question.id }}">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ question.id }}" aria-expanded="false" aria-controls="collapse{{ question.id }}">
+                  {{ question.title }}
+                </button>
+              </h2>
+              <div id="collapse{{ question.id }}" class="accordion-collapse collapse" aria-labelledby="heading{{ question.id }}" data-bs-parent="#questionAccordion">
+                <div class="accordion-body">
+                  <p><strong>Description:</strong> {{ question.description|linebreaks }}</p>
+                  <p><strong>Created by:</strong> {{ question.owner.username|default:'N/A' }}</p>
+                  <p><strong>Created on:</strong> {{ question.created_at|date:"d/M/Y H:i:s" }}</p>
+                </div>
+              </div>
+            </div>
+          {% empty %}
+            <p>No questions found.</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

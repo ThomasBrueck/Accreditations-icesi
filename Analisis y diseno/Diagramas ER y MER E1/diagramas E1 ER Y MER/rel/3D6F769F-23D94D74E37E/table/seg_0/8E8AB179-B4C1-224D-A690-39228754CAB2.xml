@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8E8AB179-B4C1-224D-A690-39228754CAB2" name="Factor">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>38E49CBE-1965-99CE-3C37-67A95C2ADCAC</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_factor" id="F086D702-7C27-1046-AD27-864C1FBA28A4">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>FB924C4A-1032-B589-7720-E1787AAE2C2D</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="selfassessmentreport_id_report" id="9A79914C-3CF9-4728-1212-B4AE8DB0C150">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>487264E7-F5CA-A55D-3C6C-12EECFDE59D0</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="816059D0-E068-D18B-7F86-AD14EFC16CB2" referredColumn="68882C38-0903-7FED-487C-402E54860CD8"/>
+</associations>
+</Column>
+<Column name="FactorStatus_id_Statusfactor" id="E9D05BF6-19A3-0065-38BC-A7C4A9E50FCB">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>7D6EE644-40C5-73C8-67D7-73945774798A</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E7F227B4-3BE1-F42F-EEE4-6FF441880F6D" referredColumn="AB0DD405-5180-B8A3-8C99-1ED76315F127"/>
+</associations>
+</Column>
+<Column name="characteristic" id="C91D8910-3E43-3317-F31C-C198668DAC8B">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>7367A04E-EBC0-8832-DB4D-7621D0E788C6</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DE5474AD-7CFD-ED02-A451-77ECEB0CD750" name="Factor_PK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>FD1DF1EE-F70D-75F7-A4A6-B81F6F14D7BA</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F086D702-7C27-1046-AD27-864C1FBA28A4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F663E4A0-1338-7410-B4D9-9462F40C0482" name="Factor_FactorStatus_FK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>70589638-2D4F-5C1B-4271-DFF4872130DA</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E9D05BF6-19A3-0065-38BC-A7C4A9E50FCB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0B365F6E-4589-877E-C51C-23D4EC1D16EE" name="Factor_selfassessmentreport_FK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>5FD7A75C-0F74-AA2A-2DDB-D08B18B44682</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9A79914C-3CF9-4728-1212-B4AE8DB0C150"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="657ED83C-B01B-EB09-5104-A1423B0B3D79" containerWithKeyObject="52AD856F-1908-3126-848D-B22DD96B72CE" localFKIndex="B95DB234-5E9F-0F26-020D-1F55FAA06321" name="Rolepermission_Permiso_FK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 23:39:04 UTC</createdTime>
+<generatorID>1DC1AA52-6FA8-6DE6-EE5C-6521665AB560</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<referredTableLongName>permission</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>C27B9679-85B4-4CB2-0E61-4CFF0B98436F</referredTableID>
+<keyObject>44E1AE12-3C87-DDA4-A96E-ECBDD194343D</keyObject>
+<referredKeyID>44E1AE12-3C87-DDA4-A96E-ECBDD194343D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Id_permission</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

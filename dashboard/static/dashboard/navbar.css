@@ -1,0 +1,330 @@
+:root {
+    --primary-color: #4361ee;
+    --primary-light: #eaefff;
+    --primary-dark: #3a56d4;
+    --danger-color: #ef4444;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-500: #6b7280;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --transition: all 0.3s ease;
+}
+
+/* Navbar principal */
+.main-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 64px;
+    padding: 0 1.5rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Acciones del navbar */
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Sistema de notificaciones */
+.notification-wrapper {
+    position: relative;
+}
+
+.notification-icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: #0055ff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+}
+
+.notification-icon:hover {
+    background-color: #0033cc;
+}
+
+.notification-icon i {
+    font-size: 1.25rem;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #dc3545;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+}
+
+/* Dropdown de notificaciones */
+.notification-dropdown {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    transform: translateX(-10px);
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow-y: auto;
+    max-height: 400px;
+    display: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.notification-dropdown.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) translateX(-10px);
+}
+
+/* Prevent horizontal scrolling */
+body, .main-content, .dashboard-container {
+    overflow-x: hidden;
+}
+
+.dropdown-header {
+    padding: 10px 15px;
+    border-bottom: 1px solid #f1f1f1;
+    background-color: #f9f9f9;
+}
+
+.dropdown-header h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.dropdown-content {
+    padding: 10px 0;
+    max-height: 340px;
+    overflow-y: auto;
+}
+
+#notification-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.notification-item {
+    padding: 10px 15px;
+    border-bottom: 1px solid #f1f1f1;
+    transition: background-color 0.3s;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+.notification-item:hover {
+    background-color: #f7f7f7;
+}
+
+.notification-item.unread {
+    background-color: #f0f8ff;
+}
+
+.notification-item.empty {
+    text-align: center;
+    color: #999;
+    padding: 2rem 1.25rem;
+}
+
+.notification-title {
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+}
+
+.notification-meta {
+    font-size: 12px;
+    color: #999;
+    display: flex;
+    justify-content: space-between;
+}
+
+.notification-author, .notification-time {
+    display: block;
+}
+
+/* Wave effect for new notifications */
+.notification-badge.new-notification {
+    animation: wave 1.5s infinite;
+}
+
+@keyframes wave {
+    0% {
+        box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+    }
+}
+
+/* Perfil de usuario */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.user-profile:hover {
+    background-color: var(--gray-100);
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.user-name {
+    font-weight: 600;
+    color: var(--gray-800);
+    font-size: 0.875rem;
+}
+
+.user-role {
+    color: var(--gray-500);
+    font-size: 0.75rem;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--gray-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+/* Dropdown del perfil */
+.profile-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: 220px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.2s ease-in-out;
+}
+
+.profile-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.profile-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+.profile-item {
+    padding: 0;
+}
+
+.profile-item a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: var(--gray-700);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.profile-item a:hover {
+    background-color: var(--gray-100);
+}
+
+.profile-item i {
+    font-size: 1rem;
+    color: var(--gray-500);
+}
+
+.profile-separator {
+    height: 1px;
+    background-color: var(--gray-200);
+    margin: 0.5rem 0;
+}
+
+.logout-link {
+    color: var(--danger-color) !important;
+}
+
+.logout-link i {
+    color: var(--danger-color) !important;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .user-info {
+        display: none;
+    }
+    
+    .navbar-actions {
+        gap: 0.75rem;
+    }
+}

@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="ECBD24CC-2D0F-7587-3DC7-84372942F3BC" name="Comment">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-02 02:03:09 UTC</createdTime>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<engineerTo>
+<item key="3D6F769F-8A12-3156-A6E5-23D94D74E37E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_report" id="E82DD279-3DA7-6CF9-EBC6-9FF7FFB60010">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-02 03:05:54 UTC</createdTime>
+<generatorID>C9FB8DC3-F8DF-F240-FB21-773153BE1413</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<engineerTo>
+<item key="3D6F769F-8A12-3156-A6E5-23D94D74E37E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>25D554D1-D741-7B09-5E35-000B9A976A2A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_comentario" id="EA364892-AC48-AD85-4054-A0D58D983EDB">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-02 03:06:18 UTC</createdTime>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<engineerTo>
+<item key="3D6F769F-8A12-3156-A6E5-23D94D74E37E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="contenido" id="488E1382-3046-C7D3-A69A-26B7B1523F54">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-02 03:06:29 UTC</createdTime>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<engineerTo>
+<item key="3D6F769F-8A12-3156-A6E5-23D94D74E37E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id_user" id="70DE5695-1F01-F6B1-DB65-E3588D93937B">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-02 14:36:16 UTC</createdTime>
+<generatorID>D5DD1102-8883-4B58-02EF-DFBC1FD88563</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<engineerTo>
+<item key="3D6F769F-8A12-3156-A6E5-23D94D74E37E" value="true"/>
+</engineerTo>
+<referedAttribute>2FC8FCEE-2A4C-F3B0-1183-EDAD4393A093</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_factor" id="E3FCE5C2-A713-A4A6-FE08-C085A4E54FDC">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-02 14:36:53 UTC</createdTime>
+<generatorID>30B0DEB7-8736-9DC7-9722-84B4A8ED8378</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<engineerTo>
+<item key="3D6F769F-8A12-3156-A6E5-23D94D74E37E" value="true"/>
+</engineerTo>
+<referedAttribute>FB924C4A-1032-B589-7720-E1787AAE2C2D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estatus" id="C1725276-0D0D-09DA-B635-2AC6628FD885">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-02 14:37:43 UTC</createdTime>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<engineerTo>
+<item key="3D6F769F-8A12-3156-A6E5-23D94D74E37E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0DA1FC82-0EAE-37A3-1156-09762FF2869F" name="Comentario PK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-02 03:06:28 UTC</createdTime>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<engineerTo>
+<item key="3D6F769F-8A12-3156-A6E5-23D94D74E37E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>EA364892-AC48-AD85-4054-A0D58D983EDB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,42 @@
+{% extends 'dashboard/base-dashboard.html' %}
+{% load static %}
+
+{% block title %}Answer Question{% endblock %}
+
+{% block css_files %}
+<link rel='stylesheet' href="{% static 'dashboard/dashboard.css' %}">
+<link rel='stylesheet' href="{% static 'dashboard/sidebar.css' %}">
+<link rel='stylesheet' href="{% static 'dashboard/reports.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include "dashboard/include/sidebar.html" %}
+
+<div class="main-content">
+  <div class="container py-4">
+    <h2 class="mb-4">{% if question.answered_at %}Edit Answer for{% else %}Answer{% endif %} Question for {{ factor.name }}</h2>
+
+    
+    <form method="post" class="card shadow-sm p-4">
+        {% csrf_token %}
+        {% if form.non_field_errors %}
+          <div class="alert alert-danger">
+            {{ form.non_field_errors }}
+          </div>
+        {% endif %}
+      
+        <div class="mb-3">
+          <label for="{{ form.answer.id_for_label }}" class="form-label">Answer</label>
+          {{ form.answer }}
+        </div>
+      
+        <div class="d-flex justify-content-end">
+          <a href="{% url 'question-manage' factor.id %}" class="btn btn-outline-secondary me-2">Cancel</a>
+          <button type="submit" class="btn btn-primary">{% if question.answered_at %}Update Answer{% else %}Submit Answer{% endif %}</button>
+        </div>
+    </form>
+
+
+  </div>
+</div>
+{% endblock %}

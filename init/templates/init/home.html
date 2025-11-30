@@ -1,0 +1,29 @@
+{% extends "init/base-init.html" %}
+{% load static %}
+
+{% block title %}
+    Acreditaciones ICESI
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'init/home.css' %}">
+    <link rel="stylesheet" href="{% static 'init/include/background.css' %}">
+{% endblock %}
+
+{% block content %}
+   {% include "init/include/nav-bar.html" %} 
+
+    <div class="background-overlay"></div>
+
+    <div class="container glassmorphism">
+        <div class="content">
+            <h1 class="app-name">Acreditaciones</h1>
+            <p class="tagline">Gestion de acreditaciones Universidad ICESI</p>
+            <div class="buttons">
+                <a href="{% url 'login-user' %}" class="btn btn-primary btn-custom">Log in</a>
+                <a href="{% url 'register-user' %}" class="btn btn-primary btn-custom">Register</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

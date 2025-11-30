@@ -1,0 +1,82 @@
+<div class="sidebar">
+    <div class="sidebar-header text-center">
+        <h2>Acreditaciones</h2>
+    </div>
+    <ul class="sidebar-menu">
+        <li>
+            {% if user.role.name == 'acadi' or user.role.name == 'program director'%}
+                <a href="{% url 'dashboard-admin' %}">
+                <i class="bi bi-house-door me-2"></i> Dashboard
+                </a>
+            {% else %}
+                <a href="{% url 'dashboard-user' %}">
+                <i class="bi bi-house-door me-2"></i> Dashboard
+                </a>
+            {% endif %}
+        </li>
+
+        <li>
+            <a href="{% url 'report-list' %}">
+                <i class="bi bi-file-earmark-text me-2"></i> Reports
+            </a>
+        </li>
+
+        {% if user.role.name == 'acadi' or user.role.name == 'program director' %}
+        <li>
+            <a href="{% url 'assign-role-view' %}">
+                <i class="bi bi-person-plus me-2"></i> Apply role
+            </a>
+        </li>
+
+        <li>
+            <a href="{% url 'task-assign' %}">
+                <i class="bi bi-list-task me-2"></i> Assign Task
+            </a>
+        </li>
+        {% endif %}
+
+        {% if user.role.name == 'acadi'%}
+        <li>
+            <a href="{% url 'remove-role-view' %}">
+                <i class="bi bi-person-dash me-2"></i> Remove role
+            </a>
+        </li>
+        {% endif %}
+        {% if user.role.name == 'acadi' %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'send_notification' %}">
+            <i class="bi bi-bell me-2"></i> Send Notification
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'notification_history' %}">
+            <i class="bi bi-clock-history me-2"></i> Notification History
+        </a>
+    </li>
+   {% endif %}
+        {% if user.role.name == 'acadi' %}
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'start-accreditation' %}">
+                <i class="bi bi-play-circle"></i> Start Accreditation
+            </a>
+        </li>
+        {% endif %}
+      
+        {% if user.role.name == 'acadi' %}
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'generate-dofa' %}">
+                <i class="bi bi-play-circle"></i> DOFA Document
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+    <div class="sidebar-footer">
+        <a href="{% url 'profile-view' %}" class="logout-btn">
+            <i class="bi bi-person-circle me-2"></i> Profile
+        </a>
+
+        <a href="{% url 'home-view' %}" class="logout-btn">
+            <i class="bi bi-box-arrow-right me-2"></i> Log Out
+        </a>
+    </div>
+</div>

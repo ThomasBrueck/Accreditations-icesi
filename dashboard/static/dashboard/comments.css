@@ -1,0 +1,82 @@
+.status-approved {
+    color: green;
+    font-weight: bold;
+}
+
+.status-not-approved {
+    color: red;
+    font-weight: bold;
+}
+
+.status-pending {
+    color: #d4a017;
+    font-weight: bold;
+}
+
+.comment-title {
+    color: #0055ff;
+    text-decoration: none;
+}
+
+.comment-title:hover {
+    text-decoration: underline;
+}
+
+
+.comment-content textarea {
+    width: 100%;
+    min-height: 300px;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #495057;
+    resize: none;
+    overflow-y: auto;
+}
+.btn-primary {
+    background-color: #689aff;
+    border-color: #689aff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #387aff;
+    border-color: #387aff;
+  }
+
+  .btn-success {
+    background-color: #1aa71e;
+    border-color: #1aa71e;
+  }
+
+  .btn-success:hover {
+    background-color: #25bf2a;
+    border-color: #25bf2a;
+  }
+
+  .btn-danger {
+    background-color: #ff5c5c;
+    border-color: #ff5c5c;
+  }
+
+  .btn-danger:hover {
+    background-color: #ff3030;
+    border-color: #ff3030;
+  }
+.comment-content .content-display {
+    width: 100%;
+    min-height: 300px;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #495057;
+    overflow-y: auto;
+    overflow-x: hidden; 
+    white-space: pre-wrap; 
+    overflow-wrap: break-word; 
+}

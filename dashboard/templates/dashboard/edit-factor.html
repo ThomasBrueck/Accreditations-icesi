@@ -1,0 +1,86 @@
+{% extends 'dashboard/base-dashboard.html' %}
+{% load static %}
+
+{% block title %}Edit Factor{% endblock %}
+
+{% block css_files %}
+<link rel='stylesheet' href="{% static 'dashboard/dashboard.css' %}">
+<link rel='stylesheet' href="{% static 'dashboard/sidebar.css' %}">
+{% endblock %}
+
+{% block js_files %}
+{% endblock %}
+
+{% block content %}
+{% include "dashboard/include/sidebar.html" %}
+{% include 'dashboard/include/navbar.html' %}
+
+<input type="checkbox" id="sidebar-toggle" class="d-none">
+
+<div class="main-content">
+    <div class="container-fluid py-4">
+        <h2>Edit Factor: {{ factor.name }}</h2>
+
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="{{ form.name.id_for_label }}" class="form-label">Name</label>
+                        {{ form.name }}
+                        {% if form.name.errors %}
+                            <div class="text-danger">{{ form.name.errors }}</div>
+                        {% endif %}
+                    </div>
+                    <div class="mb-3">
+                        <label for="{{ form.content.id_for_label }}" class="form-label">Content</label>
+                        {{ form.content }}
+                        {% if form.content.errors %}
+                            <div class="text-danger">{{ form.content.errors }}</div>
+                        {% endif %}
+                    </div>
+                    <div class="mb-3">
+                        <label for="{{ form.google_doc_url.id_for_label }}" class="form-label">Google Docs URL (for collaborative editing)</label>
+                        {{ form.google_doc_url }}
+                        <small class="form-text text-muted">Enter the Google Docs URL (e.g., https://docs.google.com/document/d/abc123/edit) for collaborative editing.</small>
+                        {% if form.google_doc_url.errors %}
+                            <div class="text-danger">{{ form.google_doc_url.errors }}</div>
+                        {% endif %}
+                    </div>
+                    <div class="mb-3">
+                        <label for="{{ form.status.id_for_label }}" class="form-label">Status</label>
+                        {{ form.status }}
+                        {% if form.status.errors %}
+                            <div class="text-danger">{{ form.status.errors }}</div>
+                        {% endif %}
+                    </div>
+                    <div class="mb-3">
+                        <label for="{{ form.end_date.id_for_label }}" class="form-label">End Date</label>
+                        {{ form.end_date }}
+                        {% if form.end_date.errors %}
+                            <div class="text-danger">{{ form.end_date.errors }}</div>
+                        {% endif %}
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                        {% if factor.report %}
+                            <a href="{% url 'view-report' factor.report.id %}" class="btn btn-secondary">Cancel</a>
+                        {% else %}
+                            <a href="{% url 'report-list' %}" class="btn btn-secondary">Cancel</a>
+                        {% endif %}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

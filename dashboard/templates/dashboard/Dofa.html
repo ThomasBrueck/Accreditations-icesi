@@ -1,0 +1,24 @@
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+{% include 'dashboard/include/sidebar.html' %}
+{% include 'dashboard/include/navbar.html' %}
+
+<div class="main-content">
+    <div class="container-fluid py-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title">DOFA Analysis</h2>
+                        <p class="card-text">Generate a document containing all strengths and aspects to improve for each factor.</p>
+                        <a href="{% url 'generate-dofa' %}" class="btn btn-primary">
+                            <i class="fas fa-download me-2"></i>Generate Document
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

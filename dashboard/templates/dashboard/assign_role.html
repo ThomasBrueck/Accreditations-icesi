@@ -1,0 +1,70 @@
+{% extends "dashboard/base-dashboard.html" %}
+
+{% load static %}
+
+{% block title %}
+    Asignar Rol a Usuario
+{% endblock %}
+
+{% block css_files %}
+    <link rel='stylesheet' href="{% static 'dashboard/dashboard.css' %}">
+    <link rel='stylesheet' href="{% static 'dashboard/sidebar.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    {% include 'dashboard/include/sidebar.html' %}
+    {% include 'dashboard/include/navbar.html' %}
+
+<div class="main-content">
+    <div class="container py-3 mt-5"> 
+        <div class="row mt-5">
+            <div class="col-md-8 mx-auto mt-4">
+                <div class="bg-white p-4 rounded shadow-sm">
+                    <h1 class="mb-4 text-center">Apply role to user</h1>
+
+                    <form method="POST" class="mt-4">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="user_id" class="form-label">Select the user</label>
+                            <select class="form-select" name="user_id" id="user_id" required>
+                                <option value="">Select user</option>
+                                {% for user in users %}
+                                    {% if user.id != request.user.id and not user.is_superuser %}
+                                        <option value="{{ user.id }}">{{ user.username }}</option>
+                                    {% endif %}
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="role_id" class="form-label">Role:</label>
+                            <select class="form-select" name="role_id" id="role_id" required>
+                                <option value="">Select a role</option>
+                                {% for role in roles %}
+                                    <option value="{{ role.id }}">{{ role.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="d-flex justify-content-end">
+                            <button type="submit" class="btn btn-primary">Apply role</button>
+                        </div>
+                    </form>
+
+                    {% if messages %}
+                        <div class="messages mt-4">
+                            {% for message in messages %}
+                                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                                    {{ message }}
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

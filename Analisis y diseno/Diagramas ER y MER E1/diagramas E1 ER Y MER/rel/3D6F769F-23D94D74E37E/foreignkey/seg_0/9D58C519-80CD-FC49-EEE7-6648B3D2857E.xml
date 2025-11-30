@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="9D58C519-80CD-FC49-EEE7-6648B3D2857E" containerWithKeyObject="0FA6D55C-8AE6-4B6E-A50D-F77E4D2A1E7B" localFKIndex="8D959055-59D6-7F42-E07E-E35CC95A1572" name="Comment_selfassessmentreport_FK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>C9FB8DC3-F8DF-F240-FB21-773153BE1413</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<referredTableLongName>selfassessmentreport</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>28EDA30E-DE86-6455-CA39-2772EC6B8440</referredTableID>
+<keyObject>8D6B0CC2-0667-DC60-4CC7-62453AEB9564</keyObject>
+<referredKeyID>8D6B0CC2-0667-DC60-4CC7-62453AEB9564</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>id_report</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

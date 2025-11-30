@@ -1,0 +1,50 @@
+.profile-container {
+    text-align: center;
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.profile-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+.profile-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.profile-role {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+.profile-stars {
+    color: #f8c307;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+.profile-email {
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+}
+.profile-email:hover {
+    text-decoration: underline;
+}
+.container-fluid {
+    display: flex;
+    min-height: 100vh;
+}
+.profile-row {
+    display: flex;
+    flex: 1;
+}
+.profile-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}

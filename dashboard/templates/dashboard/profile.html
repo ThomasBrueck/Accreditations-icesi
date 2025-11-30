@@ -1,0 +1,70 @@
+{% extends 'dashboard/base-dashboard.html' %}
+{% load static %}
+
+{% block title %}
+    Your Profile
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'dashboard/dashboard.css' %}">
+    <link rel="stylesheet" href="{% static 'dashboard/sidebar.css' %}">
+    <link rel="stylesheet" href="{% static 'dashboard/profile.css' %}">
+{% endblock %}
+
+{% block js_files %}
+{% endblock %}
+
+{% block content %}
+    {% include 'dashboard/include/sidebar.html' %}
+    {% include 'dashboard/include/navbar.html' %}
+
+    <input type="checkbox" id="sidebar-toggle" class="d-none">
+
+    <div class="main-content">
+        <div class="container-fluid">
+            <div class="row profile-row">
+                <div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 col-lg-7">
+                            <div class="bg-white p-5 rounded shadow-sm profile-container">
+                                {% if messages %}
+                                    <div class="messages mb-4">
+                                        {% for message in messages %}
+                                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                                {{ message }}
+                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+
+                                <h2 class="mb-5 text-center">Hello, Welcome to your profile</h2>
+                                <div class="text-center mb-4">
+                                    <img src="{% if user.profile_picture %}{{ user.profile_picture.url }}{% else %}https://www.pngitem.com/pimgs/m/150-1503945_transparent-user-png-default-user-image-png-png.png{% endif %}" alt="Profile Picture" class="profile-image">
+                                </div>
+                                <div class="profile-name text-center fs-4">{{ user.username }}</div>
+                                <div class="profile-role text-center mb-5 fs-5">
+                                    {% if user.role.name == 'acadi' %}
+                                        ACADI
+                                    {% elif user.role.name == 'program director' %}
+                                        Program Director
+                                    {% else %}
+                                        Common
+                                    {% endif %}
+                                </div>
+                                <div><h4 class="mb-3">Information:</h4></div>
+                                <div class="mb-5">
+                                    <strong>Email:</strong>
+                                    <a href="mailto:{{ user.email }}" class="profile-email">{{ user.email }}</a>
+                                </div>
+                                <div class="text-center">
+                                    <a href="{% url 'edit-profile-view' %}" class="btn btn-primary btn-lg">Edit Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

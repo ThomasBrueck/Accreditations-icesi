@@ -1,0 +1,95 @@
+
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    text-align: left;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
+
+
+input:focus {
+    border: 2px solid #0055ff;
+}
+
+
+.error {
+    background: #ffe6e6;
+    color: #d9534f;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+button {
+    background: #0055ff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    width: 100%;
+}
+
+button:hover {
+    background: #00bbff;
+}
+
+.role-selection {
+    margin-top: 6px;
+    margin-bottom: 20px;
+}
+
+.role-selection label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    display: block; 
+}
+
+.role-selection select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.role-selection select:hover {
+    border-color: #007bff;  
+    background-color: #f0f8ff;  
+}
+
+.role-selection select:focus {
+    border-color: #007bff;
+    outline: none;
+}

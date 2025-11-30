@@ -1,0 +1,46 @@
+{% extends 'dashboard/base-dashboard.html' %}
+{% load static %}
+
+{% block title %}Preview Characteristics{% endblock %}
+
+{% block css_files %}
+<link rel='stylesheet' href="{% static 'dashboard/dashboard.css' %}">
+<link rel='stylesheet' href="{% static 'dashboard/sidebar.css' %}">
+<link rel='stylesheet' href="{% static 'dashboard/reports.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include "dashboard/include/sidebar.html" %}
+
+
+<div class="main-content">
+    <div class="container py-4">
+        <h2 class="mb-4">Preview Characteristics for {{ factor.name }}</h2>
+
+        {% if characteristics_data %}
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for data in characteristics_data %}
+                        <tr>
+                            <td>{{ data.title }}</td>
+                            <td>{{ data.description|default:"" }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="d-flex justify-content-end">
+                <a href="{% url 'characteristic-manage' factor.id %}" class="btn btn-outline-secondary me-2">Cancel</a>
+                <a href="{% url 'characteristic-confirm' factor.id %}" class="btn btn-primary">Confirm</a>
+            </div>
+        {% else %}
+            <p>No data to preview.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

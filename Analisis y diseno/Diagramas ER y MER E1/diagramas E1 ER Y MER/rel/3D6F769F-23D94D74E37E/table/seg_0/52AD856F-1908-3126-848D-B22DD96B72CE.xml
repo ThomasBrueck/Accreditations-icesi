@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="52AD856F-1908-3126-848D-B22DD96B72CE" name="Rolepermission">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 23:39:04 UTC</createdTime>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<ordsAlias>relation_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Permiso_Id_permiso" id="8527B7AE-3E79-D12B-C8FB-3388F81657CB">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 23:39:04 UTC</createdTime>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="657ED83C-B01B-EB09-5104-A1423B0B3D79" referredColumn="FEEDBC14-4B41-1341-EEAC-E5E41B5CFA76"/>
+</associations>
+</Column>
+<Column name="Rol_Id_rol" id="60D26275-C50C-48B8-DB29-CC08C6764876">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 23:39:04 UTC</createdTime>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="01489417-8C55-E285-5F52-8DB060C9A904" referredColumn="CF7C256A-BBE1-1A2F-C794-8EF92C118A84"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F8F001F3-B303-B031-E7D4-F20971FE1D14" name="Relation_2_PK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 23:39:04 UTC</createdTime>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8527B7AE-3E79-D12B-C8FB-3388F81657CB"/>
+<colUsage columnID="60D26275-C50C-48B8-DB29-CC08C6764876"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B95DB234-5E9F-0F26-020D-1F55FAA06321" name="Rolepermission_Permiso_FK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 23:39:04 UTC</createdTime>
+<generatorID>1DC1AA52-6FA8-6DE6-EE5C-6521665AB560</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8527B7AE-3E79-D12B-C8FB-3388F81657CB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="11D958DB-8BEC-BF70-5C10-4CCE22ADE782" name="Rolepermission_Rol_FK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 23:39:04 UTC</createdTime>
+<generatorID>1DC1AA52-6FA8-6DE6-EE5C-6521665AB560</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="60D26275-C50C-48B8-DB29-CC08C6764876"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

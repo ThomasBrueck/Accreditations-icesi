@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AB0829EB-7C61-DC36-0271-4A407C44DF74" name="Usernotification">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<ordsAlias>relation_7</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="User_Id_usuario" id="96BF1D05-704C-D139-C06E-F7D026E73132">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="172CF4F1-FBF9-E2DF-6C6D-ADCC1CA23D64" referredColumn="DFF06012-119E-71AB-1E88-5885C6B125D0"/>
+</associations>
+</Column>
+<Column name="notificacion_id_notificacion" id="DDB47028-7C13-FC41-C05C-81FE9B63FEE6">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="57A3B056-E2CF-CC57-DE06-881196B150C9" referredColumn="AEB1E96E-230D-6B48-DC2E-1675B1ACF369"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4CEF776F-C45A-B3B3-B264-817042A39C31" name="Relation_7_PK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="96BF1D05-704C-D139-C06E-F7D026E73132"/>
+<colUsage columnID="DDB47028-7C13-FC41-C05C-81FE9B63FEE6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9493FF94-9759-99A2-3F9A-ADFB3A2B66BA" name="Usernotification_User_FK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>7668B3AE-9B0C-9867-7463-B90E536E17F6</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="96BF1D05-704C-D139-C06E-F7D026E73132"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="040BE268-1A56-A686-EB3C-03FA13484948" name="Usernotification_notificacion_FK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>7668B3AE-9B0C-9867-7463-B90E536E17F6</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DDB47028-7C13-FC41-C05C-81FE9B63FEE6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

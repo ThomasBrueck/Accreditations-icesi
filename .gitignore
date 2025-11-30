@@ -1,0 +1,54 @@
+# data base
+db.sqlite3
+
+# Migrations folders
+migrations/*.pyc
+migrations/__init__.py
+**/migrations/
+
+init/migrations
+dashboard/migrations
+dashboard/migrations/__pycache__
+
+# Cache files
+**/__pycache__/
+__pycache__/
+*.log
+*.pot
+*.pyc
+__pycache__
+*/__pycache__
+init/__pycache__
+dashboard/__pycache__
+.cache/
+
+#File of coverage from unit test
+.coverage
+
+# Temporal and compiled files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+#Media
+media/
+media/*
+media/reports
+*media/
+*/media/
+
+#static
+staticfiles/
+
+#.env & coverage
+.env
+*.env
+
+# tests/
+tests/__pycache__/
+*.pyc
+# WebDriver (si se descarga en el proyecto)
+# chromedriver
+# geckodriver
+

@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FBA1AB6C-16A6-12C2-9850-712847D2F231" name="StatusReport">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>F13ADBDF-87FB-8E96-1BB5-A2079A79798D</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_Status" id="4A41A607-92C5-847F-9231-AE801490BA02">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>D7708D20-7217-6C78-E51F-C3043507F8B7</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="type" id="431BD400-9111-86A0-8197-2BD0B492A509">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>8685858B-B301-7C41-5EBE-7CAACC048449</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="selfassessmentreport_id_report" id="647801C7-5CB8-EB60-C9DE-84E450E3B9DE">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>1FFFB87F-10D4-9CF1-B46C-1DA96ABD5401</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B9C7169E-518A-9CAA-90AE-84D41BADDC84" referredColumn="68882C38-0903-7FED-487C-402E54860CD8"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CFF481F2-D31D-D711-76F3-E5871A0D44DC" name="StatusReport_PK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>C3C66881-B52E-00C9-618A-1B04C4D3C292</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4A41A607-92C5-847F-9231-AE801490BA02"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DD79D5F2-1B9B-61E0-3988-DD7CD523007B" name="StatusReport_selfassessmentreport_FK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-09 21:58:08 UTC</createdTime>
+<generatorID>8530F4B2-87D5-3FDD-A00F-13AE6D06E541</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="647801C7-5CB8-EB60-C9DE-84E450E3B9DE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

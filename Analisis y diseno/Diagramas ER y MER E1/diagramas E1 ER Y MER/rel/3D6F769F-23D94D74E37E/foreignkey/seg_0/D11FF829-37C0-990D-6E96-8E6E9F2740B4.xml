@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D11FF829-37C0-990D-6E96-8E6E9F2740B4" containerWithKeyObject="2A5610A1-6ECF-B776-8C24-2711D01BBC66" localFKIndex="F8A89C47-1478-9F44-6464-122B26D3B953" name="User_Dofa_FK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-09 21:58:08 UTC</createdTime>
+<generatorID>82FBBBCC-16E2-0785-1ECF-B460CB23B4BA</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<referredTableLongName>Dofa</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>7F2D51F0-E3D0-11E1-5EC2-C86679AD58EA</referredTableID>
+<keyObject>25D7AF73-48EA-0DC2-CA88-903AB5C589F0</keyObject>
+<referredKeyID>25D7AF73-48EA-0DC2-CA88-903AB5C589F0</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_dofa</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

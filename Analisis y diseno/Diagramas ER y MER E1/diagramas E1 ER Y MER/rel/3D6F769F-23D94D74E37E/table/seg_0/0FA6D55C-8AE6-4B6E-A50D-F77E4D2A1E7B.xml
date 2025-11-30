@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0FA6D55C-8AE6-4B6E-A50D-F77E4D2A1E7B" name="Comment">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>ECBD24CC-2D0F-7587-3DC7-84372942F3BC</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="selfassessmentreport_id_report" id="0107B32B-8457-6C8A-76E6-069134182FC0">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>E82DD279-3DA7-6CF9-EBC6-9FF7FFB60010</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9D58C519-80CD-FC49-EEE7-6648B3D2857E" referredColumn="68882C38-0903-7FED-487C-402E54860CD8"/>
+</associations>
+</Column>
+<Column name="id_comentario" id="A6C17378-1D33-F454-6F43-A0C3741A6038">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>EA364892-AC48-AD85-4054-A0D58D983EDB</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="contenido" id="6FAB3AAF-A41D-70AD-B85B-D2FE68933DC4">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>488E1382-3046-C7D3-A69A-26B7B1523F54</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="User_Id_user" id="8724E3C0-2C36-F602-574D-5CD2700B2902">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>70DE5695-1F01-F6B1-DB65-E3588D93937B</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5E11CA8C-0825-D108-371A-33F28D35BBF2" referredColumn="DFF06012-119E-71AB-1E88-5885C6B125D0"/>
+</associations>
+</Column>
+<Column name="Factor_id_factor" id="AE50E958-A6A4-1A65-5519-E0822B49BD59">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>E3FCE5C2-A713-A4A6-FE08-C085A4E54FDC</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3D122320-9FF9-9426-5A81-91E5BC494E7B" referredColumn="F086D702-7C27-1046-AD27-864C1FBA28A4"/>
+</associations>
+</Column>
+<Column name="estatus" id="08CA856E-241E-5C2A-6843-63A479150F45">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>C1725276-0D0D-09DA-B635-2AC6628FD885</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5BD18069-152C-A523-EA76-0139EE4E1720" name="Comment_PK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>0DA1FC82-0EAE-37A3-1156-09762FF2869F</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A6C17378-1D33-F454-6F43-A0C3741A6038"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2D38BCAF-1E93-CA08-38C7-52DCCC581268" name="Comment_User_FK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>D5DD1102-8883-4B58-02EF-DFBC1FD88563</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8724E3C0-2C36-F602-574D-5CD2700B2902"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7A77D216-B074-1604-B307-AF73C8D291F9" name="Comment_Factor_FK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>30B0DEB7-8736-9DC7-9722-84B4A8ED8378</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AE50E958-A6A4-1A65-5519-E0822B49BD59"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8D959055-59D6-7F42-E07E-E35CC95A1572" name="Comment_selfassessmentreport_FK">
+<createdBy>USUARIO</createdBy>
+<createdTime>2025-03-08 21:22:59 UTC</createdTime>
+<generatorID>C9FB8DC3-F8DF-F240-FB21-773153BE1413</generatorID>
+<ownerDesignName>diagramas E1 ER Y MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0107B32B-8457-6C8A-76E6-069134182FC0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

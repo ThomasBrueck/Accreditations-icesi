@@ -1,0 +1,120 @@
+{% extends 'dashboard/base-dashboard.html' %}
+{% load static %}
+
+{% block title %}Manage Characteristics{% endblock %}
+
+{% block css_files %}
+<link rel='stylesheet' href="{% static 'dashboard/dashboard.css' %}">
+<link rel='stylesheet' href="{% static 'dashboard/sidebar.css' %}">
+<link rel='stylesheet' href="{% static 'dashboard/reports.css' %}">
+{% endblock %}
+
+{% block js_files %}
+<script src="{% static 'dashboard/js/confirm-window.js' %}?v=1"></script>
+<script>
+    
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Habilitar tooltips de Bootstrap
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+        new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+});
+</script>
+{% endblock %}
+
+{% block content %}
+{% include "dashboard/include/sidebar.html" %}
+{% include 'dashboard/include/navbar.html' %}
+
+<div class="main-content">
+    <div class="container py-4">
+        <h2 class="mb-4">Manage Characteristics for {{ factor.name }}</h2>
+
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        {% if user_role and user_role.name == 'acadi' %}
+            <div class="mb-4">
+                <a href="{% url 'characteristic-create' factor.id %}" class="btn btn-primary me-2">Add Characteristic</a>
+                <a href="{% url 'characteristic-upload' factor.id %}" class="btn btn-primary">Upload CSV</a>
+            </div>
+        {% endif %}
+
+        <div class="row g-4">
+            <div class="col-12">
+                <div class="accordion" id="characteristicAccordion">
+                    {% for characteristic in characteristics %}
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading{{ characteristic.id }}">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ characteristic.id }}" aria-expanded="false" aria-controls="collapse{{ characteristic.id }}">
+                                    {{ characteristic.title }} (State: {{ characteristic.state.name|default:"In Progress" }})
+                                </button>
+                            </h2>
+                            <div id="collapse{{ characteristic.id }}" class="accordion-collapse collapse" aria-labelledby="heading{{ characteristic.id }}" data-bs-parent="#characteristicAccordion">
+                                <div class="accordion-body">
+                                    <p>{{ characteristic.description }}</p>
+                                    <div class="d-flex gap-2">
+                                        {% if user_role and user_role.name == 'acadi' and characteristic.state.name == "In Progress" %}
+                                            <a href="{% url 'characteristic-update' factor.id characteristic.id %}" class="btn btn-sm btn-primary">Update</a>
+                                            <form method="post" action="{% url 'characteristic-delete' factor.id characteristic.id %}" class="d-inline delete-form" id="deleteForm{{ characteristic.id }}">
+                                                {% csrf_token %}
+                                                <button type="button" class="btn btn-sm btn-danger triggerDeleteModal" data-form-id="deleteForm{{ characteristic.id }}">Delete</button>
+                                            </form>
+                                            <button type="button" class="btn btn-sm btn-success complete-btn {% if not characteristic.has_strengths_and_aspects %}disabled{% endif %}" 
+                                                    data-url="{% url 'characteristic-complete' factor.id characteristic.id %}" 
+                                                    data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                    title="{% if not characteristic.has_strengths_and_aspects %}Can complete only if characteristic has at least one strength and one aspect to improve{% else %}Complete this characteristic{% endif %}">
+                                                Complete
+                                            </button>
+                                        {% endif %}
+                                        {% if characteristic.state.name == "Completed" %}
+                                            <a href="{% url 'characteristic-details' factor.id characteristic.id %}" class="btn btn-sm btn-info">Details</a>
+                                        {% else %}
+                                            <a href="{% url 'characteristic-develop' factor.id characteristic.id %}" class="btn btn-sm btn-info">Develop</a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% empty %}
+                        <p>No characteristics found.</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<!-- Modal para Delete -->
+<div id="deleteModal" class="custom-modal">
+    <div class="custom-modal-content">
+        <h5 class="mb-3" id="modalTitle">Confirm Delete</h5>
+        <p id="modalMessage">Are you sure you want to delete this characteristic? This action cannot be undone.</p>
+        <div class="d-flex justify-content-end gap-2 mt-4">
+            <button type="button" class="btn btn-outline-secondary cancel-delete-btn">Cancel</button>
+            <button type="button" class="btn btn-danger confirm-delete-btn">Delete</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para Complete -->
+<div id="completeModal" class="custom-modal">
+    <div class="custom-modal-content">
+        <h5 class="mb-3" id="modalTitle">Confirm Complete</h5>
+        <p id="modalMessage">Are you sure you want to complete this characteristic? This action cannot be undone.</p>
+        <div class="d-flex justify-content-end gap-2 mt-4">
+            <button type="button" class="btn btn-outline-secondary cancel-complete-btn">Cancel</button>
+            <button type="button" class="btn btn-success confirm-complete-btn">Complete</button>
+        </div>
+    </div>
+</div>
+{% endblock %}

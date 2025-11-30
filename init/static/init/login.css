@@ -1,0 +1,143 @@
+/* Estilo para el formulario */
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin: 50px auto; /* Centra el formulario verticalmente */
+}
+
+/* Estilo para las etiquetas */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    text-align: left;
+    color: #333;
+}
+
+/* Estilo para los campos de entrada (input) */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
+
+/* Estilo para cuando el campo de entrada está en foco (focus) */
+input:focus {
+    border: 2px solid #0055ff;
+}
+
+/* Estilo para los mensajes de error */
+.error {
+    background: #ffe6e6;
+    color: #d9534f;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Estilo para el botón de login */
+button {
+    background: #0055ff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Estilo para el hover en el botón */
+button:hover {
+    background: #00bbff;
+}
+
+/* Estilo para el título de login */
+h1.login {
+    color: #ffffff;  /* Azul para usuario */
+    font-size: 32px;  /* Asegura que el título se vea grande y destacado */
+    margin-bottom: 30px;  /* Espacio debajo del título */
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Contenedor para las opciones de login y el texto "Other way" */
+.login-options-container {
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* Agregar texto encima de las opciones de login */
+.login-options-container p {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Estilo para las opciones de login (otros métodos de login) */
+.login-options {
+    font-size: 14px;
+    color: #333;
+    display: flex;  /* Usamos flexbox para alinear los enlaces horizontalmente */
+    justify-content: space-between;  /* Distribuye los enlaces equitativamente */
+    gap: 10px;  /* Espacio entre los enlaces */
+}
+
+/* Estilo para los enlaces dentro de "Other way" */
+.login-options a {
+    text-decoration: none;
+    color: #0055ff;
+    font-size: 14px;
+    display: inline-block;
+    width: 48%;  /* Hace que los enlaces se distribuyan en el 50% del ancho */
+    text-align: center;
+}
+
+.login-options a:hover {
+    color: #00bbff;
+}
+
+/* Línea de separación entre las opciones de login y el formulario */
+.separator-line {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.2);  /* Línea de separación con opacidad */
+    margin: 20px 10px;  /* Espacio antes y después de la línea */
+}
+
+/* Estilo para el enlace de "Olvidé mi contraseña" */
+a[href="#"] {
+    text-decoration: none;  /* Elimina la línea debajo del enlace */
+    color: #0055ff;  /* Color similar al de los enlaces de "Other way" */
+    font-size: 14px;
+    display: inline-block;  /* Hace que el enlace se comporte como bloque en línea */
+    width: 48%;  /* Se asegura de que ocupe el mismo ancho que las opciones de login */
+    text-align: center;  /* Centra el texto */
+    margin: 10px 0;  /* Agrega un margen para que no quede pegado a otros elementos */
+}
+
+/* Estilo para el hover en el enlace */
+a[href="#"]:hover {
+    color: #00bbff;  /* Cambia el color al hacer hover */
+    text-decoration: underline;  /* Agrega subrayado al hacer hover */
+}
+

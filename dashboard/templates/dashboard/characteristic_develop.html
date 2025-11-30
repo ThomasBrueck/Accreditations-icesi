@@ -1,0 +1,82 @@
+{% extends 'dashboard/base-dashboard.html' %}
+{% load static %}
+
+{% block title %}Develop Characteristic{% endblock %}
+
+{% block css_files %}
+<link rel='stylesheet' href="{% static 'dashboard/dashboard.css' %}">
+<link rel='stylesheet' href="{% static 'dashboard/sidebar.css' %}">
+<link rel='stylesheet' href="{% static 'dashboard/reports.css' %}">
+<style>
+    .column { float: left; width: 48%; margin: 1%; }
+    .clear { clear: both; }
+    ul { list-style-type: none; padding-left: 0; }
+    ul li { padding: 5px 0; }
+</style>
+{% endblock %}
+
+{% block content %}
+{% include "dashboard/include/sidebar.html" %}
+
+<div class="main-content">
+    <div class="container py-4">
+        <h2 class="mb-4">Develop Characteristic for {{ factor.name }} - {{ characteristic.title }}</h2>
+
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        <form method="post" class="card shadow-sm p-4">
+            {% csrf_token %}
+            <div class="row">
+                <div class="column">
+                    <h4>Strengths</h4>
+                    <ul>
+                        {% for strength in characteristic.strengths.all %}
+                            <li>{{ strength.global_strength.name }}</li>
+                        {% empty %}
+                            <li>No strengths added yet.</li>
+                        {% endfor %}
+                    </ul>
+                    <div class="mb-3">
+                        <label for="{{ form.strength_new.id_for_label }}" class="form-label">Add New Strength</label>
+                        {{ form.strength_new }}
+                    </div>
+                    <div class="mb-3">
+                        <label for="{{ form.strength_existent.id_for_label }}" class="form-label">Add Existent Strength</label>
+                        {{ form.strength_existent }}
+                    </div>
+                </div>
+                <div class="column">
+                    <h4>Aspects to Improve</h4>
+                    <ul>
+                        {% for aspect in characteristic.aspects.all %}
+                            <li>{{ aspect.global_aspect.name }}</li>
+                        {% empty %}
+                            <li>No aspects added yet.</li>
+                        {% endfor %}
+                    </ul>
+                    <div class="mb-3">
+                        <label for="{{ form.aspect_new.id_for_label }}" class="form-label">Add New Aspect to Improve</label>
+                        {{ form.aspect_new }}
+                    </div>
+                    <div class="mb-3">
+                        <label for="{{ form.aspect_existent.id_for_label }}" class="form-label">Add Existent Aspect to Improve</label>
+                        {{ form.aspect_existent }}
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="d-flex justify-content-end mt-3">
+                <a href="{% url 'characteristic-manage' factor.id %}" class="btn btn-outline-secondary me-2">Cancel</a>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
